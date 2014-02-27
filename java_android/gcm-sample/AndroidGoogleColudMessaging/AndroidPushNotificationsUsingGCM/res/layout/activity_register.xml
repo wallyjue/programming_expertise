@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:text="User Name:" />
+
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:layout_marginBottom="20dip"
+        android:ems="10"
+        android:text="alexsu@qnap.com" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:text="Password:" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:layout_marginBottom="20dip"
+        android:text="1qaz2wsx" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:text="Device ID:" />
+
+    <EditText
+        android:id="@+id/txtDeviceId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:layout_marginBottom="20dip"
+        android:text="52d3aafc50f645526bcfd923" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:text="Register" />
+
+</LinearLayout>
