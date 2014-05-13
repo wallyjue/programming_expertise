@@ -1,0 +1,11 @@
+
+
+autoscan // scan the Makefile.am and source code
+*edit configure.scan and rename it to configure.in
+aclocal  // copying the macros
+autoheader // generates header pattern: config.h.in
+automake -a // generates Makefile.in
+autoconf // expends macros in configure.in in order to generates configure
+./configure // performs building environment checking
+make // compiles
+

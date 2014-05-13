@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 22
+/svn/!svn/ver/20/trunk
+END
+darray.c
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/16/trunk/darray.c
+END
+binary
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/14/trunk/binary
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/16/trunk/main.c
+END
+dlist.h
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/11/trunk/dlist.h
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/17/trunk/AUTHORS
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/17/trunk/ChangeLog
+END
+darray.h
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/16/trunk/darray.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/17/trunk/Makefile.am
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/17/trunk/NEWS
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/19/trunk/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/19/trunk/README
+END
+dlist.c
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/15/trunk/dlist.c
+END

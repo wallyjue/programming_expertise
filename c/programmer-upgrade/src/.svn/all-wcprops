@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/20/trunk/src
+END
+dlist.c
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/17/trunk/src/dlist.c
+END
+darray.c
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/17/trunk/src/darray.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/20/trunk/src/main.c
+END
+dlist.h
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/20/trunk/src/dlist.h
+END
+darray.h
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/20/trunk/src/darray.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/19/trunk/src/Makefile.am
+END
