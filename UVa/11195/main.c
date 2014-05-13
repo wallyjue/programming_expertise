@@ -17,23 +17,35 @@ int mark_pos(int** board, int x, int y, int q)
     int flag = 0;
     for( i = 0; i < q; i++){
         j = y;
-        board[i][j] = POS_OCCUPIED;
+        if(board[i][j] == POS_VACANCY){
+            board[i][j] = POS_OCCUPIED;
+        }
     }           
     for( j = 0; j < q; j++){
         i = x;
-        board[i][j] = POS_OCCUPIED;
+        if(board[i][j] == POS_VACANCY){
+            board[i][j] = POS_OCCUPIED;
+        }
     }
     for( i = x, j = y; i < q && j < q; i++, j++){
-        board[i][j] = POS_OCCUPIED;
+        if(board[i][j] == POS_VACANCY){
+            board[i][j] = POS_OCCUPIED;
+        }
     }
-    for( i = x, j = y; i > 0 && j > 0; i--, j--){
-        board[i][j] = POS_OCCUPIED;
+    for( i = x, j = y; i >= 0 && j >= 0; i--, j--){
+        if(board[i][j] == POS_VACANCY){
+            board[i][j] = POS_OCCUPIED;
+        }
     }
-    for( i = x, j = y; i < q && j > 0; i++, j--){
-        board[i][j] = POS_OCCUPIED;
+    for( i = x, j = y; i < q && j >= 0; i++, j--){
+        if(board[i][j] == POS_VACANCY){
+            board[i][j] = POS_OCCUPIED;
+        }
     }
-    for( i = x, j = y; i > 0 && j < q; i--, j++){
-        board[i][j] = POS_OCCUPIED;
+    for( i = x, j = y; i >= 0 && j < q; i--, j++){
+        if(board[i][j] == POS_VACANCY){
+            board[i][j] = POS_OCCUPIED;
+        }
     }
     board[x][y] = POS_MARKED;
     return 0;
@@ -90,12 +102,31 @@ int dump_board( int** board, int q)
     int i =0, j = 0;
     for( i = 0; i < q; i++){
         for( j = 0; j < q; j++){
-            printf("%2d", board[i][j]);
+            printf("%3d", board[i][j]);
         }
         printf("\n");
     }
     return 0;
 }
+
+int clean_route(int** board, int q)
+{
+    int x,y;
+    for(x =0; x<q;x++){
+        for(y=0;y<q;y++){
+            if(board[x][y] == POS_OCCUPIED)
+            {
+                board[x][y] = POS_VACANCY;
+            }
+            if(board[x][y] == POS_MARKED)
+            {
+                board[x][y] = POS_VACANCY;
+            }
+        }
+    }
+    return 0;
+}
+
 
 int parse_board(int** board,int x_init, int y_init, int q)
 {
@@ -129,6 +160,7 @@ int main()
     size_t input_size;
     char* rawinput;
     
+    int final_num = 0;
     int **board = NULL;
     int ret = 0;
     while( getline( &rawinput, &input_size, stdin) >0 )
@@ -155,12 +187,26 @@ int main()
             }
 //            printf("\n");
         }
-        for( cnt = 0; cnt < q; cnt++){
-//            for( cnt2 = 0; cnt2 < q; cnt2++){
-                ret += parse_board(board,cnt,cnt2, q);
-  //          }
+        for( x = 0; x < q; x++){
+            for( y = 0; y < q ; y++){
+                for( cnt = 0; cnt < q; cnt++){
+                    ret += parse_board(board,x,y, q);
+                }
+                printf("ret:%d\n", ret);
+                if( ret != q){
+                    clean_route(board,q);
+                    dump_board(board,q);
+                }
+                else{
+                    final_num++;
+                }
+                ret = 0;
+                printf("\n");
+//                board[x][y] = POS_NA;
+            }
         }
-        printf("ret:%d\n", ret);
+        printf("final_num:%d\n", final_num);
+        final_num = 0;
         free( board);
     }
 
